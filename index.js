@@ -13,10 +13,13 @@ function closeModal() {
 
 // JavaScript function to capture all anchor clicks
 document
-  .querySelectorAll(".cards .card a, .read-more, .column.first a")
+  .querySelectorAll(
+    ".cards .card a, .read-more, .column.first a, .column.second a"
+  )
   .forEach(function (element) {
     element.addEventListener("click", function (event) {
       event.preventDefault(); // Prevent default action (e.g., navigating to a link)
+      console.log(event.target); // Log the clicked element
       if (this.hasAttribute("data-src")) {
         var imageSrc = this.getAttribute("data-src");
         openModal(imageSrc);
