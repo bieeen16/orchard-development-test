@@ -9,11 +9,26 @@
   <body>
     <section class="container">
       <div class="column first">
-        <img src="assets/component-01/Image-01.jpg" alt="Image 1" />
+        <a
+          href="#"
+          onclick="openModal('assets/component-01/Image-01.jpg'); return false;"
+        >
+          <img src="assets/component-01/Image-01.jpg" alt="Image 1" />
+        </a>
       </div>
       <div class="column second">
-        <img src="assets/component-01/Image-02.jpg" alt="Image 2" />
-        <img src="assets/component-01/Image-03.jpg" alt="Image 3" />
+        <a
+          href="#"
+          onclick="openModal('assets/component-01/Image-02.jpg'); return false;"
+        >
+          <img src="assets/component-01/Image-02.jpg" alt="Image 2" />
+        </a>
+        <a
+          href="#"
+          onclick="openModal('assets/component-01/Image-03.jpg'); return false;"
+        >
+          <img src="assets/component-01/Image-03.jpg" alt="Image 3" />
+        </a>
       </div>
       <div class="column third">
         <h2>ANSWER YOUR BODY'S NEEDS</h2>
@@ -39,18 +54,30 @@
       </div>
       <div class="cards">
         <div class="card">
-          <img src="assets/component-02/Image-01.jpg" alt="Image 2" />
+          <a
+            href="#"
+            onclick="openModal('assets/component-02/Image-01.jpg'); return false;"
+          >
+            <img src="assets/component-02/Image-01.jpg" alt="Image 1" />
+          </a>
           <div class="card-content">
             <h4 class="card-title">Summer Lunch Menu By Mark Best</h4>
             <p class="card-paragraph">
               AEG ambassador Mark Best's summer eats are gruaranteed to help you
               make the most of the warmer weather and entertaining at home.
             </p>
-            <p class="read-more">READ MORE</p>
+            <p class="read-more" onclick="console.log('READ MORE clicked');">
+              READ MORE
+            </p>
           </div>
         </div>
         <div class="card">
-          <img src="assets/component-02/Image-02.jpg" alt="Image 2" />
+          <a
+            href="#"
+            onclick="openModal('assets/component-02/Image-02.jpg'); return false;"
+          >
+            <img src="assets/component-02/Image-02.jpg" alt="Image 2" />
+          </a>
           <div class="card-content">
             <h4 class="card-title">
               A Traditional Christmas Eve, Mark Best Style
@@ -60,11 +87,18 @@
               shares his favourite Christmas Eve menu which is sure to impress
               your guests.
             </p>
-            <p class="read-more">READ MORE</p>
+            <p class="read-more" onclick="console.log('READ MORE clicked');">
+              READ MORE
+            </p>
           </div>
         </div>
         <div class="card">
-          <img src="assets/component-02/Image-03.jpg" alt="Image 3" />
+          <a
+            href="#"
+            onclick="openModal('assets/component-02/Image-03.jpg'); return false;"
+          >
+            <img src="assets/component-02/Image-03.jpg" alt="Image 3" />
+          </a>
           <div class="card-content">
             <h4 class="card-title">Taking Taste Further</h4>
             <p class="card-paragraph">
@@ -72,10 +106,18 @@
               designed it to make sure you get the most out of our products -
               and the best out of your food.
             </p>
-            <p class="read-more">READ MORE</p>
+            <p class="read-more" onclick="console.log('READ MORE clicked');">
+              READ MORE
+            </p>
           </div>
         </div>
+        <!-- Additional cards can be added similarly -->
       </div>
     </section>
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modal-image" />
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

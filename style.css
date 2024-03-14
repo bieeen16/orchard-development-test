@@ -1,20 +1,4 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../assets/OpenSans/OpenSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../assets/OpenSans/OpenSans-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("../assets/OpenSans/OpenSans-Light.ttf") format("truetype");
-  font-weight: 100;
-}
-
+/* Common styles */
 body {
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -25,6 +9,7 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap; /* Allow columns to wrap */
   justify-content: center;
   margin: 0 auto;
   max-width: 1200px;
@@ -33,7 +18,7 @@ body {
 }
 
 .column {
-  flex: 1;
+  flex: 1 1 300px; /* Flex basis set to 300px to ensure a minimum width */
   padding: 10px;
   box-sizing: border-box;
 }
@@ -51,7 +36,6 @@ body {
 }
 
 .second img {
-  flex: 1;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -66,6 +50,7 @@ h2 {
   font-weight: 100;
   margin-bottom: 10px;
 }
+
 .p1 {
   font-size: 18px;
   font-weight: 100;
@@ -74,11 +59,13 @@ h2 {
   margin-bottom: 50px;
   color: #b5bdbd;
 }
+
 .be-mindful {
   font-size: 15px;
   font-weight: 400;
   color: #cf1430;
 }
+
 .p2 {
   font-size: 18px;
   font-weight: 400;
@@ -100,26 +87,37 @@ h2 {
   width: 100%;
   padding: 0 150px 150px 150px;
 }
+
 .title {
   text-align: center;
   padding: 50px;
 }
+
 .all-the-latest {
   font-size: 40px;
 }
+
 .cards {
   text-align: center;
   display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center;
 }
+
 .card {
-  margin: 0 10px 0 10px;
+  margin: 0 10px 20px 10px;
+  flex: 1 1 300px; /* Flex basis set to 300px to ensure a minimum width */
 }
+
 .cards img {
+  width: 100%;
   border-bottom: 4px solid #cf1430;
 }
+
 .card-content {
   text-align: left;
 }
+
 .read-more {
   display: inline-block;
   border-bottom: 1px solid #cf1430;
@@ -135,4 +133,76 @@ h2 {
   font-weight: 100;
   color: #979c9c;
   line-height: 1.7rem;
+}
+
+/* Modal CSS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container,
+  .container2 {
+    padding: 50px;
+  }
+
+  .column,
+  .card {
+    flex: 1 1 calc(50% - 20px); /* Two columns/cards per row */
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container,
+  .container2 {
+    padding: 20px;
+  }
+
+  .column,
+  .card {
+    flex: 1 1 calc(100% - 20px); /* Single column/card per row */
+    margin: 10px;
+  }
 }
