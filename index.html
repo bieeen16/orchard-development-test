@@ -3,35 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interface Development Test</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Three Column Section</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <!-- Section: All the latest -->
-    <section class="latest-section">
-      <h2>All the latest</h2>
-      <ul>
-        <li><a href="#">Latest News</a></li>
-        <li><a href="#">New Products</a></li>
-        <li><a href="#">Special Offers</a></li>
-      </ul>
-    </section>
-
-    <!-- Section: Answer your body's needs -->
-    <section class="body-needs-section">
-      <h2>Answer your body's needs</h2>
-      <div class="image-container">
-        <img src="assets/image1.jpg" alt="Image 1" />
-        <img src="assets/image2.jpg" alt="Image 2" />
-        <img src="assets/image3.jpg" alt="Image 3" />
+    <div class="container">
+      <div class="column first">
+        <img src="assets/component-01/Image-01.jpg" alt="Image 2" />
       </div>
-    </section>
-
-    <div id="modal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="modal-image" />
+      <div class="column second">
+        <img src="assets/component-01/Image-02.jpg" alt="Image 2" />
+        <img src="assets/component-01/Image-03.jpg" alt="Image 3" />
+      </div>
+      <div class="column third">
+        <h2>Column 3 Title</h2>
+        <div class="separator"></div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
     </div>
-
-    <script src="index.js"></script>
   </body>
 </html>
