@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/OpenSans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular font weight */
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/OpenSans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700; /* Bold font weight */
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/OpenSans/OpenSans-Light.ttf") format("truetype");
+  font-weight: 100; /* Light font weight */
+}
+
 /* Common styles */
 body {
   font-family: "Open Sans", sans-serif;
